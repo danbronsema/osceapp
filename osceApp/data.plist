@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>cardiovascular</string>
+		<key>color</key>
+		<string>red</string>
+		<key>examinationGroups</key>
+		<array>
+			<dict>
+				<key>groupTitle</key>
+				<string>hands and peripheries</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>check pulse</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>head and neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>measure JVP</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>respiratory</string>
+		<key>color</key>
+		<string>blue</string>
+		<key>examinationGroups</key>
+		<array>
+			<dict>
+				<key>groupTitle</key>
+				<string>hands and peripheries</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>check pulse</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>head and neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>measure JVP</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>gastrointesintal</string>
+		<key>color</key>
+		<string>orange</string>
+		<key>examinationGroups</key>
+		<array>
+			<dict>
+				<key>groupTitle</key>
+				<string>hands and peripheries</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>check pulse</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>head and neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>measure JVP</string>
+						<key>description</key>
+						<string>cardio</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
