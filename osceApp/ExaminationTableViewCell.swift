@@ -10,6 +10,8 @@ import UIKit
 
 class ExaminationTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var procedureLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
