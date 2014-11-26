@@ -14,6 +14,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var tableView: UITableView!
     var data : NSMutableArray!
 
+    
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -25,9 +26,9 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Load up dataplist file and assign it to this controller
         self.data = loadData("data")
+
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,5 +68,13 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
+    
+
+    
+    
+    
+    
+    
+    
 
 }

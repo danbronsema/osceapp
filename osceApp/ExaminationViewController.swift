@@ -8,18 +8,63 @@
 
 import UIKit
 
-class ExaminationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class ExaminationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate  {
 
-    @IBAction func finshedExamButton(sender: AnyObject) {
-        displayExaminationScore()
+    var timerValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return timerValues.count
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        var value = timerValues[row]
+        return String(value)
+    }
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var value = timerValues[row]
+        var valueString = String(value)
+        let attributedString = NSAttributedString(string: valueString, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        return attributedString
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    /* ----------------------------------------- */
+    // VARIABLES
+    /* ----------------------------------------- */
+
     var currentExamination : NSMutableDictionary!
     var examinationCount = 0
     var runningScore = 0
     var selectedProcedure : NSDictionary?
+    var countdownDuration : Double?
     
+    /* ----------------------------------------- */
+    // OUTLETS
+    /* ----------------------------------------- */
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timerBackground: UIView!
+    @IBOutlet weak var timerPicker: UIPickerView!
+    @IBOutlet weak var dropDownPickerView: UIView!
+    /* ----------------------------------------- */
+    // ACTIONS
+    /* ----------------------------------------- */
+
+    @IBAction func timerButton(sender: AnyObject) {
+        self.dropDownPickerView.hidden = true
+    }
+    
+    @IBAction func selectTimeDuration(sender: AnyObject) {
+        if self.dropDownPickerView.hidden == true {
+            self.dropDownPickerView.hidden = false
+        } else {
+            self.dropDownPickerView.hidden = true
+        }
+        
+    }
+    @IBAction func finshedExamButton(sender: AnyObject) {
+        displayExaminationScore()
+    }
     @IBAction func cellButtonPressed(sender: UIButton) {
         println("pressed the \(sender.titleLabel!.text!)")
         if sender.titleLabel!.text! == "NO" {
@@ -30,12 +75,6 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             runningScore -= 1
         }
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        startGame()
-    }
-    
-    
     @IBAction func descriptionButton(sender: AnyObject) {
         let buttonPosition :CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let indexPath :NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
@@ -48,8 +87,6 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         performSegueWithIdentifier("detail", sender: self)
     }
     
-    
-    
     func displayExaminationScore() {
         var score = Float(runningScore) / Float(examinationCount)
         var percentage : Int = Int(score * 100)
@@ -60,24 +97,44 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         }
     }
     
-    @IBOutlet weak var timerBackground: UIView!
+    /* ----------------------------------------- */
+    // VIEW LOAD TRIGGERS
+    /* ----------------------------------------- */
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
+        countdownDuration = 485.0
+        
         if let color = currentExamination["color"] as? String {
             self.navigationController?.navigationBar.barTintColor = themeColors[color]
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)            
+            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
             self.timerBackground.backgroundColor = themeColors[color]
+            self.dropDownPickerView.backgroundColor = themeColors[color]
         }
         if let examTitle = currentExamination["name"] as? String {
             self.title = examTitle.capitalizedString
         }
-    }
+        timerPicker.selectRow(7, inComponent: 0, animated: false)
 
+        
+        self.timerBackground.layer.shadowOpacity = 0.3;
+        self.timerBackground.layer.shadowRadius = 3.0;
+        self.timerBackground.layer.shadowColor = UIColor.blackColor().CGColor;
+        self.timerBackground.layer.shadowOffset = CGSizeMake(0.0, 0.0);
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    /* ----------------------------------------- */
+    // TABLEVIEW
+    /* ----------------------------------------- */
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return currentExamination["examinationGroups"]!.count
     }
@@ -107,46 +164,67 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         examinationCount += 1
         return cell
     }
-
     
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /* ----------------------------------------- */
+    // NAVIGATION
+    /* ----------------------------------------- */
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var detailView = segue.destinationViewController as DetailViewController
         detailView.selectedProcedure = selectedProcedure
     }
     
-    
-    
-    
-    var startTime = NSTimeInterval()
-    var timer = NSTimer()
-    var gameTime:Double = 12
+    /* ----------------------------------------- */
+    // TIMER
+    /* ----------------------------------------- */
 
-    func startGame() {
-        
-        let aSelector : Selector = "updateTime"
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        startTime = NSDate.timeIntervalSinceReferenceDate()
-        
-    }
-    
+    @IBOutlet weak var TimerCount: UILabel!
+
+    var startTime = NSDate()
+    var timer = NSTimer()
+    var isRunning = false
+    var totalCountDownTimeInterval : NSTimeInterval?
+
     func updateTime() {
-        var currentTime = NSDate.timeIntervalSinceReferenceDate()
-        var elapsedTime = currentTime - startTime
-        var seconds = gameTime-elapsedTime
-        if seconds > 0 {
-            elapsedTime -= NSTimeInterval(seconds)
-            println("\(Int(seconds))")
-        } else {
+        totalCountDownTimeInterval = NSTimeInterval(self.countdownDuration!)
+        var elapsedTime : NSTimeInterval  = NSDate().timeIntervalSinceDate(startTime)
+        var remainingTime : NSTimeInterval = totalCountDownTimeInterval! - elapsedTime
+
+        if remainingTime <= 0.0 {
             timer.invalidate()
         }
+
+        let minutes = UInt8(remainingTime / 60.0)
+        remainingTime = remainingTime - (NSTimeInterval(minutes) * 60)
+
+        let seconds = UInt8(remainingTime)
+        
+        let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+
+        
+        
+        println("\(minutes):\(strSeconds)")
+        TimerCount.text = "\(minutes):\(strSeconds)"
+        
     }
 
+    @IBAction func StartButton(sender: AnyObject) {
+        if !timer.valid {
+            startTime = NSDate()
+            let aSelector : Selector = "updateTime"
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.10, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        }
+    }
     
-    
+    @IBAction func StopButton(sender: AnyObject) {
+        timer.invalidate()
+    }
+
+    @IBAction func ResetButton(sender: AnyObject) {
+        timer.invalidate()
+        TimerCount.text = "00:00"
+    }
+
     
     
     
