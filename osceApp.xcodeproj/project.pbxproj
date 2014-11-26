@@ -19,6 +19,7 @@
 		ECA732431A233C4E00805EA2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */; };
 		ECA732451A233EAC00805EA2 /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732441A233EAC00805EA2 /* data.swift */; };
 		ECA732471A2342FD00805EA2 /* theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732461A2342FD00805EA2 /* theme.swift */; };
+		ECB48A1C1A26074F00E03563 /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB48A1B1A26074F00E03563 /* SpringAnimation.swift */; };
 		ECD1251B1A23F262000E2FC2 /* ExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */; };
 		ECD1251E1A23F919000E2FC2 /* ExaminationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */; };
 		ECEC40811A24784E00B4B954 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC40801A24784E00B4B954 /* DetailViewController.swift */; };
@@ -51,6 +52,7 @@
 		ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		ECA732441A233EAC00805EA2 /* data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
 		ECA732461A2342FD00805EA2 /* theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theme.swift; sourceTree = "<group>"; };
+		ECB48A1B1A26074F00E03563 /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationViewController.swift; sourceTree = "<group>"; };
 		ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationTableViewCell.swift; sourceTree = "<group>"; };
 		ECEC40801A24784E00B4B954 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		ECA731EA1A23253C00805EA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECB48A1B1A26074F00E03563 /* SpringAnimation.swift */,
 				ECA732401A233AD500805EA2 /* ExampleTableViewController.swift */,
 				ECA7320C1A23264000805EA2 /* data.plist */,
 				ECA731EB1A23253C00805EA2 /* Info.plist */,
@@ -256,6 +259,7 @@
 				ECD1251B1A23F262000E2FC2 /* ExaminationViewController.swift in Sources */,
 				ECA732111A2326A100805EA2 /* CategoryViewController.swift in Sources */,
 				ECA731ED1A23253C00805EA2 /* AppDelegate.swift in Sources */,
+				ECB48A1C1A26074F00E03563 /* SpringAnimation.swift in Sources */,
 				ECA732451A233EAC00805EA2 /* data.swift in Sources */,
 				ECA732431A233C4E00805EA2 /* CategoryTableViewCell.swift in Sources */,
 			);

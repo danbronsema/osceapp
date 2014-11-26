@@ -190,10 +190,10 @@
                                 </connections>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8Z-wE-g0m" userLabel="dropDownPicker">
-                                <rect key="frame" x="0.0" y="60" width="600" height="220"/>
+                                <rect key="frame" x="0.0" y="-172" width="600" height="220"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-XY-TMb">
-                                        <rect key="frame" x="0.0" y="6" width="600" height="162"/>
+                                        <rect key="frame" x="0.0" y="12" width="600" height="162"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="dSH-SY-VLL"/>
@@ -205,7 +205,7 @@
                                     </pickerView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9z-Kv-JON">
                                         <rect key="frame" x="0.0" y="174" width="600" height="46"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="NdV-RJ-qG0"/>
                                         </constraints>
@@ -215,6 +215,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="selectTimeDuration:" destination="3H0-bu-87K" eventType="touchUpInside" id="Q9y-Sb-4EQ"/>
                                             <action selector="timerButton:" destination="3H0-bu-87K" eventType="touchUpInside" id="mXS-eV-Md6"/>
                                         </connections>
                                     </button>
@@ -223,7 +224,7 @@
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="Y9z-Kv-JON" secondAttribute="centerX" id="1uX-1L-Uwx"/>
                                     <constraint firstAttribute="height" constant="220" id="8mz-fb-4fC"/>
-                                    <constraint firstItem="sTU-XY-TMb" firstAttribute="top" secondItem="D8Z-wE-g0m" secondAttribute="top" id="BhJ-yR-gze"/>
+                                    <constraint firstItem="sTU-XY-TMb" firstAttribute="top" secondItem="D8Z-wE-g0m" secondAttribute="top" constant="5" id="BhJ-yR-gze"/>
                                     <constraint firstItem="Y9z-Kv-JON" firstAttribute="leading" secondItem="D8Z-wE-g0m" secondAttribute="leading" id="NK2-Fp-R6S"/>
                                     <constraint firstAttribute="trailing" secondItem="sTU-XY-TMb" secondAttribute="trailing" id="Z9Y-vY-1Zj"/>
                                     <constraint firstAttribute="bottom" secondItem="Y9z-Kv-JON" secondAttribute="bottom" id="kVf-2K-wcG"/>
@@ -261,7 +262,7 @@
                                             <action selector="selectTimeDuration:" destination="3H0-bu-87K" eventType="touchUpInside" id="4Th-Ts-2Tq"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY0-sm-PC2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XY0-sm-PC2">
                                         <rect key="frame" x="479" y="14" width="35" height="32"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="Start">
@@ -275,7 +276,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="8pB-pV-c02" secondAttribute="centerX" id="0SE-kV-sUD"/>
+                                    <constraint firstItem="IkL-N8-XdI" firstAttribute="leading" secondItem="XY0-sm-PC2" secondAttribute="trailing" constant="13" id="FkC-60-bSu"/>
                                     <constraint firstAttribute="centerY" secondItem="IkL-N8-XdI" secondAttribute="centerY" id="K4W-0j-x7M"/>
+                                    <constraint firstAttribute="centerY" secondItem="XY0-sm-PC2" secondAttribute="centerY" id="ZM2-xB-EXd"/>
                                     <constraint firstAttribute="trailing" secondItem="IkL-N8-XdI" secondAttribute="trailing" constant="30" id="acw-vt-aVR"/>
                                     <constraint firstItem="GjZ-4I-jY7" firstAttribute="leading" secondItem="aLL-TW-r5A" secondAttribute="leading" constant="30" id="lX1-aU-4L6"/>
                                     <constraint firstAttribute="height" constant="60" id="oMZ-QX-smG"/>
@@ -292,7 +295,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="aLL-TW-r5A" firstAttribute="trailing" secondItem="5Xa-OH-2Yp" secondAttribute="trailing" id="0IT-ZD-QT3"/>
-                            <constraint firstItem="D8Z-wE-g0m" firstAttribute="top" secondItem="aLL-TW-r5A" secondAttribute="bottom" id="0fN-rR-9iK"/>
+                            <constraint firstItem="D8Z-wE-g0m" firstAttribute="top" secondItem="aLL-TW-r5A" secondAttribute="bottom" constant="-232" id="0fN-rR-9iK"/>
                             <constraint firstItem="5Xa-OH-2Yp" firstAttribute="top" secondItem="aLL-TW-r5A" secondAttribute="bottom" id="3Nv-WD-2nI"/>
                             <constraint firstItem="aLL-TW-r5A" firstAttribute="top" secondItem="9fM-ug-bYe" secondAttribute="bottom" id="Ars-sU-saW"/>
                             <constraint firstItem="D8Z-wE-g0m" firstAttribute="leading" secondItem="PS2-3i-gdY" secondAttribute="leadingMargin" constant="-16" id="De8-PB-MLe"/>

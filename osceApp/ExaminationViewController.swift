@@ -10,23 +10,7 @@ import UIKit
 
 class ExaminationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate  {
 
-    var timerValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return timerValues.count
-    }
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        var value = timerValues[row]
-        return String(value)
-    }
-    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        var value = timerValues[row]
-        var valueString = String(value)
-        let attributedString = NSAttributedString(string: valueString, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
-        return attributedString
-    }
+    
     
     /* ----------------------------------------- */
     // VARIABLES
@@ -37,6 +21,9 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     var runningScore = 0
     var selectedProcedure : NSDictionary?
     var countdownDuration : Double?
+    var timerValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    var chosenTimeInMinutes = 8
+    var chosenTimeInSeconds = 480
     
     /* ----------------------------------------- */
     // OUTLETS
@@ -51,20 +38,31 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     /* ----------------------------------------- */
 
     @IBAction func timerButton(sender: AnyObject) {
-        self.dropDownPickerView.hidden = true
+        resetTimer()
     }
     
     @IBAction func selectTimeDuration(sender: AnyObject) {
+        // REVEAL
         if self.dropDownPickerView.hidden == true {
             self.dropDownPickerView.hidden = false
+            spring(0.4, { () -> Void in
+                self.dropDownPickerView.transform = CGAffineTransformMakeTranslation(0, 220)
+            })
         } else {
-            self.dropDownPickerView.hidden = true
+        // HIDE
+            springWithCompletion(0.4, { () -> Void in
+                self.dropDownPickerView.transform = CGAffineTransformMakeTranslation(0, -10)
+            }, { (finished) -> Void in
+                self.dropDownPickerView.hidden = true
+            })
         }
         
     }
     @IBAction func finshedExamButton(sender: AnyObject) {
+        resetTimer()
         displayExaminationScore()
     }
+    
     @IBAction func cellButtonPressed(sender: UIButton) {
         println("pressed the \(sender.titleLabel!.text!)")
         if sender.titleLabel!.text! == "NO" {
@@ -75,6 +73,7 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             runningScore -= 1
         }
     }
+    
     @IBAction func descriptionButton(sender: AnyObject) {
         let buttonPosition :CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
         let indexPath :NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
@@ -105,7 +104,7 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
 
         
-        countdownDuration = 485.0
+        countdownDuration = 480
         
         if let color = currentExamination["color"] as? String {
             self.navigationController?.navigationBar.barTintColor = themeColors[color]
@@ -220,11 +219,38 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         timer.invalidate()
     }
 
-    @IBAction func ResetButton(sender: AnyObject) {
+    func resetTimer() {
         timer.invalidate()
-        TimerCount.text = "00:00"
+        self.countdownDuration = Double(self.chosenTimeInSeconds)
+        self.TimerCount.text = "\(self.chosenTimeInMinutes):00"
     }
 
+    /* ----------------------------------------- */
+    // PICKER TIMER
+    /* ----------------------------------------- */
+
+    
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return timerValues.count
+    }
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        var value = timerValues[row]
+        return String(value)
+    }
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        var value = timerValues[row]
+        var valueString = String(value)
+        let attributedString = NSAttributedString(string: valueString, attributes: [NSForegroundColorAttributeName : UIColor.whiteColor()])
+        return attributedString
+    }
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        self.chosenTimeInMinutes = row + 1
+        self.chosenTimeInSeconds = (row + 1) * 60
+    }
     
     
     
