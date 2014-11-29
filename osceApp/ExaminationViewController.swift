@@ -17,6 +17,10 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     /* ----------------------------------------- */
 
     var currentExamination : NSMutableDictionary!
+    var currentExaminationName : String?
+    var currentExaminationColor: UIColor?
+    var currentExaminationProcedures : NSMutableArray?
+
     var examinationCount = 0
     var runningScore = 0
     var selectedProcedure : NSDictionary?
@@ -24,7 +28,7 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     var timerValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
     var chosenTimeInMinutes = 8
     var chosenTimeInSeconds = 480
-    
+
     /* ----------------------------------------- */
     // OUTLETS
     /* ----------------------------------------- */
@@ -33,12 +37,17 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var timerBackground: UIView!
     @IBOutlet weak var timerPicker: UIPickerView!
     @IBOutlet weak var dropDownPickerView: UIView!
+    @IBOutlet weak var timerButton: UIButton!
+    
     /* ----------------------------------------- */
     // ACTIONS
     /* ----------------------------------------- */
 
     @IBAction func timerButton(sender: AnyObject) {
         resetTimer()
+        spring(0.3, { () -> Void in
+            self.TimerCount.transform = CGAffineTransformMakeScale(1.2, 1.5)
+        })
     }
     
     @IBAction func selectTimeDuration(sender: AnyObject) {
@@ -55,6 +64,7 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             }, { (finished) -> Void in
                 self.dropDownPickerView.hidden = true
             })
+            
         }
         
     }
@@ -63,26 +73,50 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         displayExaminationScore()
     }
     
+    @IBAction func cellButtonDown(sender: UIButton) {
+        sender.alpha = 0.4
+    }
+    
+    func resetSize(sender: UIButton) {
+        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: { () -> Void in
+            sender.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        }, completion: nil)
+        
+    }
+    
     @IBAction func cellButtonPressed(sender: UIButton) {
-        println("pressed the \(sender.titleLabel!.text!)")
-        if sender.titleLabel!.text! == "NO" {
+        sender.alpha = 1.0
+        if sender.titleLabel!.text == "NO" {
+            sender.transform = CGAffineTransformMakeScale(0.3, 0.3)
             sender.setTitle("YES", forState: .Normal)
+            let origImage = UIImage(named: "circle-checked-icon")
+            let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             runningScore += 1
+            sender.setImage(tintedImage, forState: .Normal)
+            sender.tintColor = self.currentExaminationColor
+            sender.alpha = 0
+            UIView.animateWithDuration(0.15, delay: 0, options: nil, animations: { () -> Void in
+            sender.alpha = 1.0
+                sender.transform = CGAffineTransformMakeScale(1.4, 1.4)
+                }, completion: { (Bool) -> Void in
+                self.resetSize(sender)
+            })
+        
         } else {
             sender.setTitle("NO", forState: .Normal)
             runningScore -= 1
+            let origImage = UIImage(named: "circle-icon")
+            let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            sender.alpha = 0.15
+            sender.setImage(tintedImage, forState: .Normal)
+            sender.tintColor = UIColor.blackColor()
         }
     }
     
     @IBAction func descriptionButton(sender: AnyObject) {
-        let buttonPosition :CGPoint = sender.convertPoint(CGPointZero, toView: self.tableView)
-        let indexPath :NSIndexPath = self.tableView.indexPathForRowAtPoint(buttonPosition)!
-        var procedure : AnyObject?
-        if let examinationGroup = currentExamination["examinationGroups"]![indexPath.section] as? NSMutableDictionary {
-            procedure = examinationGroup["procedures"]
-        }
-        procedure = procedure![indexPath.row]
-        self.selectedProcedure = procedure as? NSDictionary
+        
+        let indexPath = getSelectedIndexPathAtPoint(sender, self.tableView)
+        selectedProcedure = getProcedureByIndexPath(currentExamination, indexPath.section, indexPath.row)
         performSegueWithIdentifier("detail", sender: self)
     }
     
@@ -99,30 +133,26 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     /* ----------------------------------------- */
     // VIEW LOAD TRIGGERS
     /* ----------------------------------------- */
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+    // RESET TIMERS
+    //
         countdownDuration = 480
-        
-        if let color = currentExamination["color"] as? String {
-            self.navigationController?.navigationBar.barTintColor = themeColors[color]
-            self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-            self.timerBackground.backgroundColor = themeColors[color]
-            self.dropDownPickerView.backgroundColor = themeColors[color]
-        }
-        if let examTitle = currentExamination["name"] as? String {
-            self.title = examTitle.capitalizedString
-        }
+        resetTimer()
         timerPicker.selectRow(7, inComponent: 0, animated: false)
 
+    // SET UP CURRENT EXAMINATION COLORS
+    //
         
+        self.navigationController?.navigationBar.barTintColor = self.currentExaminationColor
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        self.timerBackground.backgroundColor = self.currentExaminationColor
+        self.dropDownPickerView.backgroundColor = UIColor(red:0.275, green:0.275, blue:0.349, alpha: 1)
         self.timerBackground.layer.shadowOpacity = 0.3;
         self.timerBackground.layer.shadowRadius = 3.0;
         self.timerBackground.layer.shadowColor = UIColor.blackColor().CGColor;
         self.timerBackground.layer.shadowOffset = CGSizeMake(0.0, 0.0);
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -146,7 +176,6 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         return numberCount!
     }
     
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customExaminationCell", forIndexPath: indexPath) as ExaminationTableViewCell
         
@@ -155,13 +184,25 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             procedure = examinationGroup["procedures"]
         }
         procedure = procedure![indexPath.row]
+
+        let isChecked = procedure!["isChecked"] as Bool
         
         if let procedureText = procedure!["name"] as? String {
             cell.procedureLabel.text = procedureText
-
         }
         examinationCount += 1
+        let origImage = UIImage(named: "circle-icon")
+        let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        cell.circleUnchecked.alpha = 0.15
+        cell.circleUnchecked.setImage(tintedImage, forState: .Normal)
+        cell.circleUnchecked.tintColor = UIColor.blackColor()
+
+//        toggleCheckbox(currentExamination["name"!], indexPath.section, indexPath.row, isChecked)
+
+        
         return cell
+
+        
     }
     
     /* ----------------------------------------- */
@@ -188,23 +229,16 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         totalCountDownTimeInterval = NSTimeInterval(self.countdownDuration!)
         var elapsedTime : NSTimeInterval  = NSDate().timeIntervalSinceDate(startTime)
         var remainingTime : NSTimeInterval = totalCountDownTimeInterval! - elapsedTime
-
         if remainingTime <= 0.0 {
             timer.invalidate()
         }
-
         let minutes = UInt8(remainingTime / 60.0)
         remainingTime = remainingTime - (NSTimeInterval(minutes) * 60)
-
         let seconds = UInt8(remainingTime)
-        
         let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
 
-        
-        
         println("\(minutes):\(strSeconds)")
         TimerCount.text = "\(minutes):\(strSeconds)"
-        
     }
 
     @IBAction func StartButton(sender: AnyObject) {

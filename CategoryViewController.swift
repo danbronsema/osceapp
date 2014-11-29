@@ -12,6 +12,7 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
 
     
     @IBOutlet weak var tableView: UITableView!
+
     var data : NSMutableArray!
 
     
@@ -64,15 +65,17 @@ class CategoryViewController: UIViewController, UITableViewDataSource, UITableVi
         if let indexPath = tableView.indexPathForSelectedRow() {
             if let selectedExamination = self.data[indexPath.row] as? NSMutableDictionary {
                 examinationView.currentExamination = selectedExamination
+                let color = selectedExamination["color"] as? String
+                examinationView.currentExaminationColor = themeColors[color!]
+                let selectedProcedures = selectedExamination["examinationGroups"] as? NSMutableArray
+                examinationView.currentExaminationProcedures = selectedProcedures
+                let selectedExaminationName = selectedExamination["name"] as? String
+                examinationView.currentExaminationName = selectedExaminationName
             }
+
         }
         
     }
-    
-
-    
-    
-    
     
     
     

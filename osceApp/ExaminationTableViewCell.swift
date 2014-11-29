@@ -11,6 +11,7 @@ import UIKit
 class ExaminationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var procedureLabel: UILabel!
+    @IBOutlet weak var circleUnchecked: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
