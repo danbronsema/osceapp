@@ -63,7 +63,7 @@ class ExaminationCompleteViewController: UIViewController {
         super.viewDidLoad()
         scoreLabel.text = String("\(currentExaminationScore!)%")
         scoreLabel.textColor = currentExaminationColor
-        if currentExaminationScore > 90 {
+        if currentExaminationScore > 80 {
             particles.drawParticles()
         }
         let name = currentExaminationName!.capitalizedString

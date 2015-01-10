@@ -18,7 +18,6 @@
 		ECA731F41A23253C00805EA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA731F31A23253C00805EA2 /* Images.xcassets */; };
 		ECA731F71A23253C00805EA2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA731F51A23253C00805EA2 /* LaunchScreen.xib */; };
 		ECA732031A23253D00805EA2 /* osceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732021A23253D00805EA2 /* osceAppTests.swift */; };
-		ECA7320D1A23264000805EA2 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA7320C1A23264000805EA2 /* data.plist */; };
 		ECA732111A2326A100805EA2 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732101A2326A100805EA2 /* CategoryViewController.swift */; };
 		ECA732431A233C4E00805EA2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */; };
 		ECA732451A233EAC00805EA2 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732441A233EAC00805EA2 /* LoadData.swift */; };
@@ -27,7 +26,8 @@
 		ECB8C4E91A295E2700E9EEB3 /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8C4E81A295E2700E9EEB3 /* Procedures.swift */; };
 		ECD1251B1A23F262000E2FC2 /* ExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */; };
 		ECD1251E1A23F919000E2FC2 /* ExaminationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */; };
-		ECE2B40B1A38186000697ACE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE2B40A1A38186000697ACE /* StoreKit.framework */; };
+		ECE504051A613620004E4253 /* data_bac.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE504031A613620004E4253 /* data_bac.plist */; };
+		ECE504071A614588004E4253 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECE504061A614588004E4253 /* data.plist */; };
 		ECEC40811A24784E00B4B954 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC40801A24784E00B4B954 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,6 @@
 		ECA731FC1A23253D00805EA2 /* osceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA732011A23253D00805EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECA732021A23253D00805EA2 /* osceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osceAppTests.swift; sourceTree = "<group>"; };
-		ECA7320C1A23264000805EA2 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		ECA732101A2326A100805EA2 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = ../CategoryViewController.swift; sourceTree = "<group>"; };
 		ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		ECA732441A233EAC00805EA2 /* LoadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
@@ -66,7 +65,8 @@
 		ECB8C4E81A295E2700E9EEB3 /* Procedures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedures.swift; sourceTree = "<group>"; };
 		ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationViewController.swift; sourceTree = "<group>"; };
 		ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationTableViewCell.swift; sourceTree = "<group>"; };
-		ECE2B40A1A38186000697ACE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		ECE504031A613620004E4253 /* data_bac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data_bac.plist; sourceTree = "<group>"; };
+		ECE504061A614588004E4253 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		ECEC40801A24784E00B4B954 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE2B40B1A38186000697ACE /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +91,6 @@
 		ECA731DE1A23253C00805EA2 = {
 			isa = PBXGroup;
 			children = (
-				ECE2B40A1A38186000697ACE /* StoreKit.framework */,
 				ECA731E91A23253C00805EA2 /* osceApp */,
 				ECA731FF1A23253D00805EA2 /* osceAppTests */,
 				ECA731E81A23253C00805EA2 /* Products */,
@@ -130,9 +128,10 @@
 		ECA731EA1A23253C00805EA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ECE504061A614588004E4253 /* data.plist */,
+				ECE504031A613620004E4253 /* data_bac.plist */,
 				EC72ACDA1A29D49C003BD35B /* AppConstants.swift */,
 				ECB48A1B1A26074F00E03563 /* SpringAnimation.swift */,
-				ECA7320C1A23264000805EA2 /* data.plist */,
 				ECA731EB1A23253C00805EA2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -258,9 +257,10 @@
 			files = (
 				ECA731F21A23253C00805EA2 /* Main.storyboard in Resources */,
 				EC7C8B911A2A7AD700FC4722 /* image.png in Resources */,
+				ECE504071A614588004E4253 /* data.plist in Resources */,
 				ECA731F71A23253C00805EA2 /* LaunchScreen.xib in Resources */,
-				ECA7320D1A23264000805EA2 /* data.plist in Resources */,
 				EC9E1BCC1A23E387003BFB2C /* empty.xib in Resources */,
+				ECE504051A613620004E4253 /* data_bac.plist in Resources */,
 				ECA731F41A23253C00805EA2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
