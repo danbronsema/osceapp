@@ -24,6 +24,10 @@ class DetailViewController: UIViewController {
             detailTextField.selectable = false
         }
         self.title = selectedProcedure["name"]!.capitalizedString
+        
+        let image = UIImageView(image: UIImage(named: "icon"))
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

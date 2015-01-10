@@ -11,24 +11,30 @@
 		<array>
 			<dict>
 				<key>groupTitle</key>
-				<string>hands and peripheries</string>
+				<string>Beginning the examination</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>check pulse</string>
+						<string>Introduction</string>
 						<key>description</key>
-						<string>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from &quot;de Finibus Bonorum et Malorum&quot; by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</string>
+						<string>Introduce yourself and your role clearly to the patient. </string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>measure blood pressure</string>
+						<string>Explain procedure and gain consent</string>
 						<key>description</key>
-						<string>using a blood pressure cuff</string>
+						<string>Explain the procedure, and gain consent from the patient. Be sure to mention any findings will be kept confidential between the treating team. Ensure the patient is adequately exposed and correctly positioned.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Wash hands</string>
+						<key>description</key>
+						<string>Hand hygiene is a simple and effective solution to reduce both the spread of infection and multiresistant germs, and to protect patients from health care-associated infection. See: Ignaz Semmelweis</string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
@@ -36,14 +42,444 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 			</dict>
 			<dict>
 				<key>groupTitle</key>
-				<string>head and neck</string>
+				<string>Inspection</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>measure JVP</string>
+						<string>General appearance</string>
 						<key>description</key>
-						<string>from the sternal angle</string>
+						<string>Ensure the patient isn&apos;t in any acute distress. Is there any obvious signs of dysponea or cyanosis? Make a comment on the patient&apos;s general appearence. Cachexia is commonly caused by malignancy, but may also be caused by severe cardiac failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Hands</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Temperature, colour, capillary refill</string>
+						<key>description</key>
+						<string>Coldness and color may indicate poor peripheral vascular supply. Capillary refill should be within 2 seconds.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Clubbing</string>
+						<key>description</key>
+						<string>Cause is unknown, can be due to cyanotic congenital heart disease, infective endocarditis, lung carcinoma, bronchiectasis, lung abscess, idiopathic pulmonary fibrosis and many others</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Splinter haemorrhages</string>
+						<key>description</key>
+						<string>Linear haemorrhages along the long axis of the nail. Usually due to trauma, but importantly may be caused by infective endocarditis. Other causes are vasculitis, sepsis and haematological malignancy.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Osler&apos;s nodes &amp; Janeway lesions</string>
+						<key>description</key>
+						<string>Osler&apos;s Node: Red raised tender nodules on pulps of fingers or toes, or thenar and hypothenar eminance. They are rare. Caused by infective endocarditis. Janeway lesions: Non-tender erythematous maculopapular lesions containing bacteria, on the palms of pulps of fingers. Also rare. Caused by infective endocarditis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Tendon xanthomata</string>
+						<key>description</key>
+						<string>Deposits of lipids, yellow or orange in colour occuring over the tendons of the hand and arm. Caused by hyperlipidaemia.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Radial pulse, radial-radial delay, and radiofemoral delay</string>
+						<key>description</key>
+						<string>Note regularity and rate. Normal rate should be between 60-100. Radial-radial delay may be present in cases of large arterial occlusions by atherosclerotic plaque. Radiofemoral delay indicates coarctation of the aorta.A collapsing pulse indicates aortic regurgitation, pulsus alternans indicated severe left ventricular failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Blood pressure and vital signs</string>
+						<key>description</key>
+						<string>Normal ranges: BP 110-135 systolic and 70-85 diastolic, temp 36.1-37.5, SpO2 &gt;96%, RR 12-20</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Face</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Sclera for jaundice</string>
+						<key>description</key>
+						<string>Can occur with severe congestive heart failure and hepatic congestion. Prothestic heart valves can also cause haemolysis of red blood cells.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Xanthelasmata</string>
+						<key>description</key>
+						<string>Yellow cholesterol deposits around the eyes, relatively common. Can be a normal variant or may indicate Type II or III hyperlipidaemia.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Arcus senilis</string>
+						<key>description</key>
+						<string>Grey circle seen around the outer aspect of the pupil, and associated with increased cardiovascular risk.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Mitral facies</string>
+						<key>description</key>
+						<string>Rosy red cheeks with a blueish tinge, due to dilatation of malar capillaries. Associated with pulmonary hypertension and mitral stenosis. Quite rare.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>High arched pallate</string>
+						<key>description</key>
+						<string>Occurs in Marfan&apos;s syndrome, which is associated with congenital heart disease as well as aortic and mitral regurgitation.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Dental integrity</string>
+						<key>description</key>
+						<string>Diseased teeth or recent dental surgery can be a source of infective endocarditis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Lips, tounge, mucosa</string>
+						<key>description</key>
+						<string>Inspect the tounge and lips for central cyanosis. The mucosa should be inspected for petechiae which may indicate infective endocarditis</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Carotid arteries</string>
+						<key>description</key>
+						<string>Position medial to the sternomastoid mucles. Never palpate both carotid arteries! Palpate for character, and auscultate for signs of bruits.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Jugular venous pressure</string>
+						<key>description</key>
+						<string>Provides information on right atrial and ventricular function. Position the patient at 45 degrees. Measure from the sternal angle. JVP above 3cm indicates increased right heart filling pressure; a sign of right ventricular failure, volume overload, or pericardial disease.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Praecordium</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>Evidence of any scars or pacemakers. Pectis excavatum (funnel chest) or kyphoscoliosis. Look for the apex beat, normal position is in the left fifth intercostal pace, 1cm medial to the midclaviucular line.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palpation</string>
+						<key>description</key>
+						<string>Palpate the apex beat (left fifth intercostal pace, 1cm medial to the midclaviucular line). It is only palpable in around 50% of patients. Abnormal apex beats may be due to pressure overload (aortic stenosis, hypertension), volume overloaded (mitral regurgitation, dilated cardiomyopathy). Character of the apex beat may become more apparent with the patient lying on their left hand side. Also palpate for any parasternal heaves and valvular thrills.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Auscultation</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Mitral</string>
+						<key>description</key>
+						<string>Begin in the mitral area (apex) with the bell as well as the diaphragm of the stethoscope.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Tricuspid</string>
+						<key>description</key>
+						<string>The tricuspid area is located at the fifth left intercostal space. Use the diaphragm of the stethoscope.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Pulmonary</string>
+						<key>description</key>
+						<string>The pulmonary area is located at the left sternal edge, second intercostal space. Use the diaphragm of the stethoscope.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Aortic</string>
+						<key>description</key>
+						<string>The aortic area is located at the right sternal edge, second intercostal space. Use the diaphragm of the stethoscope.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Back</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Percussion</string>
+						<key>description</key>
+						<string>Percuss the back to exclude a pleural effusion; can be due to left ventricular failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Auscultation</string>
+						<key>description</key>
+						<string>Presence of inspiratory crackles may be due to congestive cardiac failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Sacral oedema</string>
+						<key>description</key>
+						<string>Can occur in severe right heart failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Abdomen</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Palpate liver</string>
+						<key>description</key>
+						<string>An enlarged, tender liver may be a sign of right heart failure due to congestion of the hepatic veins.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Ascities</string>
+						<key>description</key>
+						<string>May occur in severe right heart failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Abdominal aorta</string>
+						<key>description</key>
+						<string>Palpate in the left of the middle line. Often palpable in thinner people, but should be pulsatile but not expansile (abdominal aortic aneurysm). </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Lower limbs</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Oedema</string>
+						<key>description</key>
+						<string>Palpate behind the medial malleolus of the tibia, and the distal shaft of the tibia. Use thumb and compress for 15 seconds. Pitting oedema occurs in the presence of heart failure, or lymphadenopathy. Note the level at which oedema occurs.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Xanthomata</string>
+						<key>description</key>
+						<string>Look for evidence of Achilles tendon xanthomata due to hyperlipidemia.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>peripheral vascular</string>
+		<key>color</key>
+		<string>light-red</string>
+		<key>examinationGroups</key>
+		<array>
+			<dict>
+				<key>groupTitle</key>
+				<string>Beginning the examination</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Introduction</string>
+						<key>description</key>
+						<string>Introduce yourself and your role clearly to the patient. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Explain procedure and gain consent</string>
+						<key>description</key>
+						<string>Explain the procedure, and gain consent from the patient. Be sure to mention any findings will be kept confidential between the treating team. Ensure the patient is adequately exposed and correctly positioned.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Wash hands</string>
+						<key>description</key>
+						<string>Hand hygiene is a simple and effective solution to reduce both the spread of infection and multiresistant germs, and to protect patients from health care-associated infection. See: Ignaz Semmelweis</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Legs</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>The peripheral vascular examination is similar to a diabetic exam, in that the legs are an excellent source of information. Inspect the legs slowly and deliberately, paying attention to any changes in skin color (purple/black from haemostasis) or brown (from haemosiderin deposition due to poor venous blood flow). Also inspect for signs of gangrene (blackening of the extremities). Look for any changes to hair distribution, and be sure to examine between the toes and under the legs for any ulceration. With the patient standing, you can also check for signs of varicose veins. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palpation</string>
+						<key>description</key>
+						<string>Assess the temperture of the legs, using the backs of your hands. Start distally, and compare both sides and note any differences.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Capillary return</string>
+						<key>description</key>
+						<string>Check the capillary return by pressing on the nail bed and releasing it. The test is considered normal if color returns within 2 seconds.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Buerger&apos;s test</string>
+						<key>description</key>
+						<string>Buerger&apos;s test involves raising the patient&apos;s feet to around 45 degrees. In the presence of poor vascular supply, pallor develops. This test can also be quantified by noting the angle at which pallor begins to occur. After this, then ask the patient to place their feet over the side of the bed, wehre cyanosis may then develop. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Pulses</string>
+						<key>description</key>
+						<string>Palpate the abdominal, femoral, popiteal, posterior tibial, and dosalis pedis. Be sure to feel on both sides, commenting on their strength and character. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Radio-femoral delay</string>
+						<key>description</key>
+						<string>Palpate the radial and femoral pulses on one side of the body at the same time. The pulsation should occur around the same time, and a delay may indicate coarcation of the aorta.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Auscultation</string>
+						<key>description</key>
+						<string>Auscultate for any aortic and femoral bruits</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Sensation</string>
+						<key>description</key>
+						<string>Assess sensation changes. Ask the patient if they can feel a cotten ball at their sternum, and with their eyes closed, assess sensation for the peripheries. Be sure to ask if feel &apos;different&apos; on either side.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Hands</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>Coldness and color may indicate poor peripheral vascular supply. Capillary refill should be within 2 seconds.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Blood pressure and vital signs</string>
+						<key>description</key>
+						<string>Normal ranges: BP 110-135 systolic and 70-85 diastolic, temp 36.1-37.5, SpO2 &gt;96%, RR 12-20</string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
@@ -60,14 +496,30 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 		<array>
 			<dict>
 				<key>groupTitle</key>
-				<string>hands and peripheries</string>
+				<string>Beginning the examination</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>check pulse</string>
+						<string>Wash hands</string>
 						<key>description</key>
-						<string>cardio</string>
+						<string>Hand hygiene is a simple and effective solution to reduce both the spread of infection and multiresistant germs, and to protect patients from health care-associated infection. See: Ignaz Semmelweis</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Explain procedure and gain consent</string>
+						<key>description</key>
+						<string>Explain the procedure, and gain consent from the patient. Be sure to mention any findings will be kept confidential between the treating team. Ensure the patient is adequately exposed and correctly positioned.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Introduction</string>
+						<key>description</key>
+						<string>Introduce yourself and your role clearly to the patient. </string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
@@ -75,14 +527,240 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 			</dict>
 			<dict>
 				<key>groupTitle</key>
-				<string>head and neck</string>
+				<string>Inspection</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>measure JVP</string>
+						<string>General appearance</string>
 						<key>description</key>
-						<string>cardio</string>
+						<string>Perform a general observation of the patient, noting whether they are comfortable at rest as well as their general well-being. Check for signs of dysponea. A normal respiratory rate should not exceed 25 breaths per minute (16-25). Make note of any signs of chronic obstructive pulmonary disease (COPD). Is the patient using accessory muscles (sternomastoid, platysma, strap muscles of the neck) to breathe? Are they breathing through pursed lips (used by COPD patients to increase positive pressure during expiration to prevent airway collapse). </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Cough, sputum, stridor, hoareness</string>
+						<key>description</key>
+						<string>Cough is a response to irritation of sensory receptors of the submucosa of the upper airways and bronchi. Check for a bovine cough (vocal cord paralysis), of a muffled wheezy cough (COPD). A loose productive cough may be due to secretion in the case of bronchitis or pneumonia. Look for evidence of sputum, and if present comment on color, volume and the presence or absence of blood. Stridor is due to obstruction of the larynx or trachea (foreign body, tumour, infection). Horseness may indicate a recurrent laryngeal nerve palsy, associated with carcinoma of the lung.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Hands</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Clubbing</string>
+						<key>description</key>
+						<string>Clubbing is due to respiratory disease in 80% of cases. More common causes include primary lung carcinoma, and intersital fibrosis. Clubbing does NOT occur in cases of COPD and asthma.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Tar staining</string>
+						<key>description</key>
+						<string>Staining of the fingers is actually due to tar staining, as nicotine is colourless; and is a sign of cigarette smoking. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Wasting and weakness</string>
+						<key>description</key>
+						<string>The T1 nerve root is located in the lower trunk of the brachial plexus. Compression of these nerves by a peripheal lung tumour results in muscle wasting of the hyperthenar muscles and weakness of finger abduction.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Blood pressure and vital signs</string>
+						<key>description</key>
+						<string>Normal ranges: BP 110-135 systolic and 70-85 diastolic, temp 36.1-37.5, SpO2 &gt;96%, RR 12-20</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Flapping tremor</string>
+						<key>description</key>
+						<string>A flapping tremor (asterixis) should be excluded. Ask the patient to dorsiflex the wrists of the arms outstretched and spread the fingers. a flapping tremor may be occur with increased carbon dioxide (CO2) retention, and is usually due to severe COPD. A bounding pulse is also a sign of incresed CO2 retention.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Pemberton&apos;s sign</string>
+						<key>description</key>
+						<string>Ask the patient to lift the arms over the head and wait for one minute. Any facial plethora, cyanosis, inspiratory stridor, and non-pulsatile elevation of the jugular venous pressure all occur in superior vena cava obstruction.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Face</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Face</string>
+						<key>description</key>
+						<string>Check for facial plethora or cyanosis due to superior vena cava obstruction, which can occur in peripheral lung tumours.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Eyes</string>
+						<key>description</key>
+						<string>Inspect the eyes for evidence of Horner&apos;s syndrome (constricted pupil, partial drooping of the eyelid, and loss of sweating; miosis, ptosis, anhydrosis)</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Nasal cavity</string>
+						<key>description</key>
+						<string>Examine the nasal cavity ising a torch and a nasal speculum if available. If no speculum is available, gently tilt the end of the nose to gain a clearer view of the nasal cavity. Polyps are associated with asthma and a deviated septum may result in nasal obstruction. The nasal passage may be inflammed in cases of infection.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Sinusus</string>
+						<key>description</key>
+						<string>Sinusitis is elicitied by tapping over the sinuses, in cases of acutue sinusitis doing so will be tender for the patient.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Mouth and tounge</string>
+						<key>description</key>
+						<string>Examine underneath the tounge for central cyanosis. The mouth should be inspected for signs of infection.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Tracheal position</string>
+						<key>description</key>
+						<string>From in front of the patient, place the forefinger of the right hand on the suprasternal notch and push up and backwards until the trachea is felt. This is uncomfortable for the patient so it needs to be performed gently. If the trachea is displaced, its edge will be felt. The trachea may be displaced TOWARDS the affected side in upper lobe collapse, upper lobe fibrosis, pneumonectomy. It will displace AWAY from the affected side in cases of massive plueral effusion  and tension pnuemothorax. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Lymph nodes</string>
+						<key>description</key>
+						<string>Palpate the axillary and cervical lymph nodes, which may be enlarged in lung malignancies and some infections.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Lungs</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>Examine the chest wall, noting shape and symmetry. A &apos;barrel chest&apos; is indicative of COPD. A pigeon chest (pectus carinatum) shape with outward bowing of the sternum and costal cartlidge occurs due to chronic childhood respiratory illness. A funnel chest (pectus excavatum) appears as a depression in the sternum and in severe cases may restrict lung capacity. Inspect for scars for evidence of previous lung surgery.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Chest movement</string>
+						<key>description</key>
+						<string>Note expansion during inspiration. Reduced chest wall movement on one side may be due to local fibrosis, consolidation, plural effusion, or pneumothorax. Bilateral reduction of the chest wall occurs during COPD or diffuse interstitial lung diseases.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palpation</string>
+						<key>description</key>
+						<string>Place hands on the chest wall, with fingers around the side of the chest. As the patient take a big breath, expansion between the thumbs should be greater than 5cm. An overinflated chest in COPD will not expand correctly, and the thumbs will instead move closer together.  </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Vocal fremitus</string>
+						<key>description</key>
+						<string>Palpate the chest wall with the palm of the hand with the patient repeating &apos;ninety-nine&apos;. The test is only positive if one side appears different from the other. Asymmetry may be due to consolidation. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Ribs</string>
+						<key>description</key>
+						<string>Check ribs for localised pain due to fracture, either as a result of trauma, tumour, bone disease or even due to prolonged coughing. Tenderness over the costochondral region is suggestive of costochronditis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Percussion</string>
+						<key>description</key>
+						<string>Percuss the anterior, posterior and axillary aspects of the chest wall. Note any regions of increased or decreased resonance. A dull note suggests a solid structure (liver, consolidation, collapsed lung), while &apos;stony dull&apos; is reserved for plureal effusions of haemothorax. Be sure to move the scapulae out of the way by asking the patient to wrap their arms around the front of their chest, rotating the scapulae anteriorly.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Auscultation</string>
+						<key>description</key>
+						<string>Breath sounds should be elicitied by asking the patient to breathe through an open mouth. Regions of decreased air entry should be noted, and may be due to COPD, plural effusion, pneumothorax, pnuemonia, neoplasm, and pulmonary collapse. Wheezes tend to be louder on expiration, and are usually the result of COPD (low pitch) or asthma (high pitch). Crackles can be defined in their timing. Early inspiratory crackles suggests small airway disease such as COPD. While late inspiratory crackles can be further defined as fine, medium or coarse. Fine crackles are associated with pulmonary fibrosis, medium crackles with left ventricular failure, and coarse crackles with either pulmonary fibrosis bronchiectasis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Abdomen</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Liver</string>
+						<key>description</key>
+						<string>Palpate the liver for signs of enlargement, which may be due to increased venous pressure, or secondary deposition of tumour from a lung carcinoma.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Legs</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Odema</string>
+						<key>description</key>
+						<string>Inspect the legs for signs of swelling or cyanosis. This may suggest cor pulmonale. Also look for signs of deep venous thrombosis.</string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
@@ -94,19 +772,35 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 		<key>name</key>
 		<string>gastrointesintal</string>
 		<key>color</key>
-		<string>orange</string>
+		<string>green</string>
 		<key>examinationGroups</key>
 		<array>
 			<dict>
 				<key>groupTitle</key>
-				<string>hands and peripheries</string>
+				<string>Beginning the examination</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>check pulse</string>
+						<string>Wash hands</string>
 						<key>description</key>
-						<string>cardio</string>
+						<string>Hand hygiene is a simple and effective solution to reduce both the spread of infection and multiresistant germs, and to protect patients from health care-associated infection. See: Ignaz Semmelweis</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Explain procedure and gain consent</string>
+						<key>description</key>
+						<string>Explain the procedure, and gain consent from the patient. Be sure to mention any findings will be kept confidential between the treating team. Ensure the patient is adequately exposed and correctly positioned.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Introduction</string>
+						<key>description</key>
+						<string>Introduce yourself and your role clearly to the patient. </string>
 						<key>isChecked</key>
 						<false/>
 					</dict>
@@ -114,14 +808,605 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
 			</dict>
 			<dict>
 				<key>groupTitle</key>
-				<string>head and neck</string>
+				<string>Inspection</string>
 				<key>procedures</key>
 				<array>
 					<dict>
 						<key>name</key>
-						<string>measure JVP</string>
+						<string>General appearance</string>
 						<key>description</key>
-						<string>cardio</string>
+						<string>The gastrointestinal examination relies greatly on making astute observations of the patient. From the end of the bed make note of the patients overall appearance. Look for signs of jaundice. This appears as yellow discoloration of the skin from hyperbilirubinaemia. Check for signs of wasting or recent weight loss. Folds of loose skin from the abdomen and limbs may be suggestive of recent weight loss. Check for changes in pigmentation. This may be due to haemoschromatosis, Addison&apos;s disease or an increase in ACTH which leads to increase in melanin production. Changes in mental state may be due to toxic metabolites leading to  hepatic encephalopathy. Finally, make sure the patient is lying flat with their head on a single pillow. This relaxes the abdominal muscles and allows for effective abdominal palpation.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Hands</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Leuconychia</string>
+						<key>description</key>
+						<string>In cases of chronic liver disease or other diseases resulting in hypoalbuminaemia, there is paleness in the nail beds. There may be a small region of pink nail bed at the most distal portion of the nail. It is thought to occur due to compression of capillary frow by the extracellular fluid.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Clubbing</string>
+						<key>description</key>
+						<string>Around a third of patients with cirrhosis may have finger clubbing. In addition some cases of inflammatory bowel disease, coeliac disease, and long-standing malnutrition can also cause clubbing.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palmar erythema</string>
+						<key>description</key>
+						<string>Also known as &apos;liver palms&apos;, this reddening of the palms can be feature of liver disease. It can also present on the soles of the feet. The aetiology in regards to liver disease remains unknown. Palmar erythema can also occur in pregnancy, thyrotoxicosis, rhuematoid arthrtitis, and polycythaemia.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Anaemia</string>
+						<key>description</key>
+						<string>Inspect the palmar creases for signs of anaemia by pulling the creases apart. Look for a strong pink color. Pallor in the palmar creases is a late sign of anaemia, which may be due to gastrointestinal blood loss,  malabsorbtion (folate, B12), heamolysis, and chronic disease.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Hepatic flap</string>
+						<key>description</key>
+						<string>Ask the patient to stretch out their arms in front, seperate the fingers, and extend the wrists for 15 seconds. A jerky, irregular flexion-extension at the wrists with lateral movement of the fingers can be due to hepatic encephalopathy. It is characteristic of liver failure, but not diagnostic and can also occur in cardiac, respiratory, and renal failure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Blood pressure and vital signs</string>
+						<key>description</key>
+						<string>Normal ranges: BP 110-135 systolic and 70-85 diastolic, temp 36.1-37.5, SpO2 &gt;96%, RR 12-20</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Arms</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Bruising</string>
+						<key>description</key>
+						<string>Large bruises (ecchymoses) may be due to clotting abnormalities. Damage to the liver can result in decreased protein synthesis and a reduction in clotting factors. Obstructive jaundice results in a shortage of bile in the digestive system and may reduce the absorbtion of fat soluable vitamins such as vitamin K which is used in the production of clotting factors II, VII, IX, and X. Tiny sized bruises (petechiae) may result from chronic alcohol abuse, which can result in thrombocytopenia from a decrease in bone marrow production. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Scratch marks</string>
+						<key>description</key>
+						<string>Obstructive or cholestatic jaundice can lead to a severe itch (pruritis) due to a buildup of metabolistes usually excreted in bile.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Axilla lymph nodes</string>
+						<key>description</key>
+						<string>Palpate the axillae for lymphadenopaty and for signs of acanthosis nigricans (brown and black skin papillomas, associated with carcinoma. acromegaly, and diabestes)</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Face</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Eyes</string>
+						<key>description</key>
+						<string>Examine the eyes for signs of jaundice (yellowing of the sclera) and anaemia (conjuctivial pallor). Rings of brownish green rings and the periphery of the cornea are due to excess deposition of copper and are known as Keyser-Fleischer rings. They are indicative of Wilson&apos;s Disease. Xantholasma a yellow plaques in the periorbital region due to inceased serum cholesterol. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Salivary glands</string>
+						<key>description</key>
+						<string>Palpate over the parotid region for signs of parotid enlargement. Bilateral enlargement may be due to alcholism, sarcoidosis, lymphoma, malnutrition, and mumps. Unilateral enlargement may be due to a parotid tumour, tumour infiltration (usually painless and causes a facial nerve palsy) or a salivary calculus. Also examine the submandibular gland, which is most often enlarged due to a calculus.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Mouth</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>The mouth represents the beginning of the gastrointestinal tract, and is the most easily accessible location for examination. Remove any false teeth. Look for any gum hypertrophy (Vit C deficiency, gingivits, leukaemia, phenytoin, pregnancy) and pigmentation (lead poisoning, antimalarial and OCP drugs, addison&apos;s disease, malignant melanoma). Fetor (bad breath) may be due to poor oral hygiene, while a sweet smell is characteristic of ketosis. Candidiasis presents as creamy white patches in the mouth, caused by the fungal infection of candida albicans. It may spread to the oesophagus and causes dysphagia. It is often due to immunosupression, chemotherapy, broad-spectrum antibiotics, alcohol abuse, and HIV infection.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Tounge</string>
+						<key>description</key>
+						<string>A thickened epithelium with bacterial debris and food particles commonly forms a coating of the tounge (particularly on the posterior aspect), and although often worse in smokers it is rarely a sign of disease. Leucoplakia is a white colored thickening of the mouth and tounge mucosa. It is premalignant, with most causes due to poor dental hygeine, smoking, alcohol, sepsis, and syphilis. Glossitis describes the smooth appearance of the tounge, and is due to atrophy of the papillae with possible ulceration in later stages. This often occurs due to nutritional deficiencies of iron, folate, and B-vitamins. Macroglossia can occur in Down syndrome, acromegaly, amyloid deposition, or tumour infiltration.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Cervical lymph nodes</string>
+						<key>description</key>
+						<string>The cervical lymph nodes should be palpated, paying particular attention to the left supraclavicular node which may be involced in advanced gastrointestinal or lung malignancy. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Chest</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Spider naevi</string>
+						<key>description</key>
+						<string>These radiating small vessels appear like spider legs, and range in size up to half a centimetre in diamater. They are often found in regions drained via the superior vena cava; in the arms, neck and chest wall. Pressure applied to the vessel blanches the lesion. A finding of greater two or three spider naevi is likely abnormal. They are most often caused by alcoholic cirrhosis, but may also appear in viral hepatitis, and late in pregnancy. Campbell de Morgan spots appear similar, they are bengin flat red circular lesions which do not blanch on pressure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Gynaecomastia</string>
+						<key>description</key>
+						<string>This may be a sign of chronic liver disease, and can be unilateral or bilateral. It can also be caused by the use of the diuretic spironolactone. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Abdomen</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>The patient should be lying flat with one pillow under the head and the abdomen exposed. Check for signs of &apos;acute abdomen&apos;, with the patient looking unwell and having shallow breathing due to irritation of the peritoneum. Inspect for scars from previous surgery or trauma. Abdominal distention can be caused by the &quot;F&apos;s&quot;: fat (obesity), fluid (ascities), fetus, flatus (due to bowel obstruction), faeces, &apos;filthy&apos; big tumour. Look for signs of prominent veins, which become engorged due to portal hypertension.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palpation</string>
+						<key>description</key>
+						<string>Reassure the patient and ask to bend the knees slightly, this helps to relax the abdominal wall muscles. Begin palpation across the nine regions beginning with light pressure on each region, before repeating with deep palpation. Look at the patient as you palpate, checking for any signs of tenderness or pain. Guarding occurs when there is contraction of the abdominal muscles, and when done involuntarily suggests peritonitis. Rebound tenderness occurs when the abdominal wall is pressed slowly and then released rapidly. When this causes pain for the patient, it is strongly suggestive of peritonitis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Liver</string>
+						<key>description</key>
+						<string>Palpate lower edge of liver below costal margin. Percuss the liver borders to determine liver size.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Kidney</string>
+						<key>description</key>
+						<string>Ballot the kidneys, noting that is unusual for the kidneys to be palpable in patient who are not thin. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Spleen</string>
+						<key>description</key>
+						<string>The spleen is palpated using two hands, the left over the lower left ribs and the right placed below the unbilicus. Move towards the upper right costal margin. A large spleen may be confused with an elarged right kidney, however the spleen has no palpable upper border (can&apos;t get above it).</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Ascities</string>
+						<key>description</key>
+						<string>Percussion over the abdomen is usually resonant due to air in the intestines. Dull percussion notes at the flanks are evident at around 2 litres of fluid. Dullness closer to the midline indicates a more gross ascites. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Auscultation</string>
+						<key>description</key>
+						<string>Listen for active bowel sounds. Absence of sounds over 4 minutes indicates paralytic illeus, while &apos;tinkling&apos; sounds are louder and more high-pitched. These occur in cases of bowel obstruction due to the presence of air and liquid. Listen for venous hums for signs of portal hypertension and bruits </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Hernias</string>
+						<key>description</key>
+						<string>Noting if it is irredicuble, obstructed, or strangulated (red, tense, tender).</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Chest</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Bruising</string>
+						<key>description</key>
+						<string></string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Oedema</string>
+						<key>description</key>
+						<string>This may be a sign of chronic liver disease, and can be unilateral or bilateral. It can also be caused by the use of the diuretic spironolactone. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Sensation changes</string>
+						<key>description</key>
+						<string>May occur in the presence of chronic alcohol abuse</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>haematological</string>
+		<key>color</key>
+		<string>purple</string>
+		<key>examinationGroups</key>
+		<array>
+			<dict>
+				<key>groupTitle</key>
+				<string>Beginning the examination</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Wash hands</string>
+						<key>description</key>
+						<string>Hand hygiene is a simple and effective solution to reduce both the spread of infection and multiresistant germs, and to protect patients from health care-associated infection. See: Ignaz Semmelweis</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Explain procedure and gain consent</string>
+						<key>description</key>
+						<string>Explain the procedure, and gain consent from the patient. Be sure to mention any findings will be kept confidential between the treating team. Ensure the patient is adequately exposed and correctly positioned.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Introduction</string>
+						<key>description</key>
+						<string>Introduce yourself and your role clearly to the patient. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Inspection</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>General appearance</string>
+						<key>description</key>
+						<string>With the patient laying flat with a pillow under their head, look for signs of wasting and pallor (anaemia). Note their ethic origin (thalassemia, sickle cell anaemia in Mediterranean and African populations respectively). Check for signs of bruising, jundice, and scratch marks.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Hands</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Koilonychia</string>
+						<key>description</key>
+						<string>From the greek (koilos-, hollow, onikh-, nail), the presence of &apos;spoon shaped&apos; nails can be due to severe iron-deficiency anemia. Rarely seen today.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palmar creases</string>
+						<key>description</key>
+						<string>Pallor of the palmar creases suggests a haemoglobin level of less than 70 g/L</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Blood pressure and vital signs</string>
+						<key>description</key>
+						<string>Normal ranges: BP 110-135 systolic and 70-85 diastolic, temp 36.1-37.5, SpO2 &gt;96%, RR 12-20. Tachycardia may be present in anaemic patients.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Arms</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Bruising</string>
+						<key>description</key>
+						<string>Make sure to note the size and distribution of any bruising. Pinhead sized bruises are petechiae while large bruises are ecchymoses. There may be an underlying coagulation disorder.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Epitrochlear/Axillary Lymph nodes</string>
+						<key>description</key>
+						<string>Palpate the epitrochlear nodes, as enlarged epitrochlear lymph noes are usually pathologcial from local infection or Non-Hodgkin&apos;s lymphoma. Continue with palpation of the axillary lymph nodes as well.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Face</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Jaundice</string>
+						<key>description</key>
+						<string>Check for scleral jaundice, which occurs in the presence of increased destruction of red blood cells.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Conjuctival pallor</string>
+						<key>description</key>
+						<string>Conjuctival pallor is indicative of anaemia, and is seen before palmar creases and nail beds. Studies have shown it is most detectable at and below 90Hb. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Fundi</string>
+						<key>description</key>
+						<string>Conjuctival pallor is indicative of anaemia, and is seen before palmar creases and nail beds. Studies have shown it is most detectable at and below 90Hb. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Mouth</string>
+						<key>description</key>
+						<string>The mouth should be examined by &apos;walking&apos; through from the outside to inside. Start at the gums for hypertrophy which can occur with AML or in scurvy. Check for signs of bleeding. Atrophic glossitis (smooth tounge) occurs in megaloblastic anaemia and iron deficiency anaemia. Check to see if there is any tonsilar enlargement.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Cervial/Supraclavicular lymph nodes</string>
+						<key>description</key>
+						<string>Examine the cervical lymph nodes from behind, making note to mention the different groups as you palpate: Submental, submandibular, sublingual, anterior and posterior triangle, occipital, pre and post auricular. Finally be sure to palpate the supraclavicular lymph nodes when the patient&apos;s shoulders shrugged.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Mouth</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>The mouth represents the beginning of the gastrointestinal tract, and is the most easily accessible location for examination. Remove any false teeth. Look for any gum hypertrophy (Vit C deficiency, gingivits, leukaemia, phenytoin, pregnancy) and pigmentation (lead poisoning, antimalarial and OCP drugs, addison&apos;s disease, malignant melanoma). Fetor (bad breath) may be due to poor oral hygiene, while a sweet smell is characteristic of ketosis. Candidiasis presents as creamy white patches in the mouth, caused by the fungal infection of candida albicans. It may spread to the oesophagus and causes dysphagia. It is often due to immunosupression, chemotherapy, broad-spectrum antibiotics, alcohol abuse, and HIV infection.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Tounge</string>
+						<key>description</key>
+						<string>A thickened epithelium with bacterial debris and food particles commonly forms a coating of the tounge (particularly on the posterior aspect), and although often worse in smokers it is rarely a sign of disease. Leucoplakia is a white colored thickening of the mouth and tounge mucosa. It is premalignant, with most causes due to poor dental hygeine, smoking, alcohol, sepsis, and syphilis. Glossitis describes the smooth appearance of the tounge, and is due to atrophy of the papillae with possible ulceration in later stages. This often occurs due to nutritional deficiencies of iron, folate, and B-vitamins. Macroglossia can occur in Down syndrome, acromegaly, amyloid deposition, or tumour infiltration.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Neck</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Cervical lymph nodes</string>
+						<key>description</key>
+						<string>The cervical lymph nodes should be palpated, paying particular attention to the left supraclavicular node which may be involced in advanced gastrointestinal or lung malignancy. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Chest</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Spider naevi</string>
+						<key>description</key>
+						<string>These radiating small vessels appear like spider legs, and range in size up to half a centimetre in diamater. They are often found in regions drained via the superior vena cava; in the arms, neck and chest wall. Pressure applied to the vessel blanches the lesion. A finding of greater two or three spider naevi is likely abnormal. They are most often caused by alcoholic cirrhosis, but may also appear in viral hepatitis, and late in pregnancy. Campbell de Morgan spots appear similar, they are bengin flat red circular lesions which do not blanch on pressure.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Gynaecomastia</string>
+						<key>description</key>
+						<string>This may be a sign of chronic liver disease, and can be unilateral or bilateral. It can also be caused by the use of the diuretic spironolactone. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Abdomen</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Inspection</string>
+						<key>description</key>
+						<string>The patient should be lying flat with one pillow under the head and the abdomen exposed. Check for signs of &apos;acute abdomen&apos;, with the patient looking unwell and having shallow breathing due to irritation of the peritoneum. Inspect for scars from previous surgery or trauma. Abdominal distention can be caused by the &quot;F&apos;s&quot;: fat (obesity), fluid (ascities), fetus, flatus (due to bowel obstruction), faeces, &apos;filthy&apos; big tumour. Look for signs of prominent veins, which become engorged due to portal hypertension.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Palpation</string>
+						<key>description</key>
+						<string>Reassure the patient and ask to bend the knees slightly, this helps to relax the abdominal wall muscles. Begin palpation across the nine regions beginning with light pressure on each region, before repeating with deep palpation. Look at the patient as you palpate, checking for any signs of tenderness or pain. Guarding occurs when there is contraction of the abdominal muscles, and when done involuntarily suggests peritonitis. Rebound tenderness occurs when the abdominal wall is pressed slowly and then released rapidly. When this causes pain for the patient, it is strongly suggestive of peritonitis.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Liver</string>
+						<key>description</key>
+						<string>Palpate lower edge of liver below costal margin. Percuss the liver borders to determine liver size.</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Kidney</string>
+						<key>description</key>
+						<string>Ballot the kidneys, noting that is unusual for the kidneys to be palpable in patient who are not thin. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Spleen</string>
+						<key>description</key>
+						<string>The spleen is palpated using two hands, the left over the lower left ribs and the right placed below the unbilicus. Move towards the upper right costal margin. A large spleen may be confused with an elarged right kidney, however the spleen has no palpable upper border (can&apos;t get above it).</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Ascities</string>
+						<key>description</key>
+						<string>Percussion over the abdomen is usually resonant due to air in the intestines. Dull percussion notes at the flanks are evident at around 2 litres of fluid. Dullness closer to the midline indicates a more gross ascites. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Auscultation</string>
+						<key>description</key>
+						<string>Listen for active bowel sounds. Absence of sounds over 4 minutes indicates paralytic illeus, while &apos;tinkling&apos; sounds are louder and more high-pitched. These occur in cases of bowel obstruction due to the presence of air and liquid. Listen for venous hums for signs of portal hypertension and bruits </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Hernias</string>
+						<key>description</key>
+						<string>Noting if it is irredicuble, obstructed, or strangulated (red, tense, tender).</string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>groupTitle</key>
+				<string>Chest</string>
+				<key>procedures</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>Bruising</string>
+						<key>description</key>
+						<string></string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Oedema</string>
+						<key>description</key>
+						<string>This may be a sign of chronic liver disease, and can be unilateral or bilateral. It can also be caused by the use of the diuretic spironolactone. </string>
+						<key>isChecked</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>Sensation changes</string>
+						<key>description</key>
+						<string>May occur in the presence of chronic alcohol abuse</string>
 						<key>isChecked</key>
 						<false/>
 					</dict>

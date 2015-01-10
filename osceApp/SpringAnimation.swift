@@ -98,3 +98,15 @@ func popoverTopRight(view: UIView) {
         
         }, completion: nil)
 }
+
+func resetButtonSize(sender: UIButton) {
+    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: { () -> Void in
+        sender.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        }, completion: nil)
+}
+
+func resetLabelSize(sender: UILabel) {
+    UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: { () -> Void in
+        sender.transform = CGAffineTransformMakeScale(1.0, 1.0)
+        }, completion: nil)
+}

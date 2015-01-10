@@ -10,17 +10,34 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-xf-4Ox">
-                    <rect key="frame" x="0.0" y="80" width="400" height="400"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start-app-icon" translatesAutoresizingMaskIntoConstraints="NO" id="wi8-Z2-idm">
+                    <rect key="frame" x="190" y="64" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="2Cz-cP-cLa"/>
+                        <constraint firstAttribute="width" constant="100" id="5xW-dX-oQo"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="oFf-Td-kXR"/>
+                        <constraint firstAttribute="height" constant="100" id="yfo-jN-2vA"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2Cz-cP-cLa"/>
+                            <exclude reference="oFf-Td-kXR"/>
+                        </mask>
+                    </variation>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.3529411764705882" green="0.3529411764705882" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wi8-Z2-idm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6X0-Hz-77r"/>
+                <constraint firstItem="wi8-Z2-idm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="c3N-Zd-X7N"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="625" y="419"/>
         </view>
     </objects>
     <resources>
-        <image name="icon" width="512" height="512"/>
+        <image name="start-app-icon" width="120" height="120"/>
     </resources>
 </document>

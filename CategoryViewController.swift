@@ -10,26 +10,23 @@ import UIKit
 
 class CategoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
-    @IBOutlet weak var tableView: UITableView!
-
     var data : NSMutableArray!
 
-    
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.490, green:0.490,
-            blue:0.553, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.275, green:0.275, blue:0.349, alpha: 1)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(red:0.275, green:0.275, blue:0.349, alpha: 1)
+        tableView.backgroundColor = UIColor(red:0.275, green:0.275, blue:0.349, alpha: 1)
         self.data = loadData("data")
-
-        
     }
 
     override func didReceiveMemoryWarning() {

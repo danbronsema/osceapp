@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
         var navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor(red:1.000, green:1.000, blue:1.000, alpha: 1)
-
+        
         return true
         
     }

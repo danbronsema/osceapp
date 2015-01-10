@@ -11,7 +11,8 @@ import UIKit
 class ExaminationTableViewCell: UITableViewCell {
 
     @IBOutlet weak var procedureLabel: UILabel!
-    @IBOutlet weak var circleUnchecked: UIButton!
+    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet weak var detailButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +24,5 @@ class ExaminationTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

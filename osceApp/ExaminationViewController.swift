@@ -17,18 +17,14 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     /* ----------------------------------------- */
 
     var currentExamination : NSMutableDictionary!
-    var currentExaminationName : String?
+    var currentExaminationName: String?
     var currentExaminationColor: UIColor?
     var currentExaminationProcedures : NSMutableArray?
 
-    var examinationCount = 0
-    var runningScore = 0
     var selectedProcedure : NSDictionary?
-    var countdownDuration : Double?
     var timerValues = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-    var chosenTimeInMinutes = 8
-    var chosenTimeInSeconds = 480
-
+    var selectedTimeInSeconds : Double = appDefaults.time
+    
     /* ----------------------------------------- */
     // OUTLETS
     /* ----------------------------------------- */
@@ -38,16 +34,31 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var timerPicker: UIPickerView!
     @IBOutlet weak var dropDownPickerView: UIView!
     @IBOutlet weak var timerButton: UIButton!
+    @IBOutlet weak var finishedButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var finishBottomButton: UIButton!
     
     /* ----------------------------------------- */
     // ACTIONS
     /* ----------------------------------------- */
 
-    @IBAction func timerButton(sender: AnyObject) {
+    @IBAction func finishedExaminationButton(sender: AnyObject) {
+        self.finishedButton.hidden = true
+        self.startButton.hidden = false
         resetTimer()
-        spring(0.3, { () -> Void in
-            self.TimerCount.transform = CGAffineTransformMakeScale(1.2, 1.5)
-        })
+        displayExaminationScore()
+    }
+
+    @IBAction func timerButton(sender: AnyObject) {
+        self.finishedButton.hidden = true
+        self.startButton.hidden = false
+        appDefaults.time = self.selectedTimeInSeconds
+        resetTimer()
+        springWithCompletion(0.15, { () -> Void in
+            self.TimerCount.transform = CGAffineTransformMakeScale(1.05, 1.05)
+        }) { (bool) -> Void in
+            resetLabelSize(self.TimerCount)
+        }
     }
     
     @IBAction func selectTimeDuration(sender: AnyObject) {
@@ -64,34 +75,19 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             }, { (finished) -> Void in
                 self.dropDownPickerView.hidden = true
             })
-            
         }
-        
-    }
-    @IBAction func finshedExamButton(sender: AnyObject) {
-        resetTimer()
-        displayExaminationScore()
     }
     
-    @IBAction func cellButtonDown(sender: UIButton) {
-        sender.alpha = 0.4
-    }
-    
-    func resetSize(sender: UIButton) {
-        UIView.animateWithDuration(0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: nil, animations: { () -> Void in
-            sender.transform = CGAffineTransformMakeScale(1.0, 1.0)
-        }, completion: nil)
-        
-    }
     
     @IBAction func cellButtonPressed(sender: UIButton) {
         sender.alpha = 1.0
-        if sender.titleLabel!.text == "NO" {
+        let indexPath = getSelectedIndexPathAtPoint(sender, self.tableView)
+        var selectedProcedure = getProcedureByIndexPath(currentExamination, indexPath.section, indexPath.row)
+        if selectedProcedure["isChecked"] as Bool == false {
+            selectedProcedure["isChecked"] = true
             sender.transform = CGAffineTransformMakeScale(0.3, 0.3)
-            sender.setTitle("YES", forState: .Normal)
             let origImage = UIImage(named: "circle-checked-icon")
             let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-            runningScore += 1
             sender.setImage(tintedImage, forState: .Normal)
             sender.tintColor = self.currentExaminationColor
             sender.alpha = 0
@@ -99,52 +95,54 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
             sender.alpha = 1.0
                 sender.transform = CGAffineTransformMakeScale(1.4, 1.4)
                 }, completion: { (Bool) -> Void in
-                self.resetSize(sender)
+                resetButtonSize(sender)
             })
-        
-        } else {
-            sender.setTitle("NO", forState: .Normal)
-            runningScore -= 1
+        } else  {
+            selectedProcedure["isChecked"] = false
             let origImage = UIImage(named: "circle-icon")
             let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
             sender.alpha = 0.15
             sender.setImage(tintedImage, forState: .Normal)
             sender.tintColor = UIColor.blackColor()
         }
+
     }
     
     @IBAction func descriptionButton(sender: AnyObject) {
-        
         let indexPath = getSelectedIndexPathAtPoint(sender, self.tableView)
         selectedProcedure = getProcedureByIndexPath(currentExamination, indexPath.section, indexPath.row)
         performSegueWithIdentifier("detail", sender: self)
     }
     
     func displayExaminationScore() {
-        var score = Float(runningScore) / Float(examinationCount)
-        var percentage : Int = Int(score * 100)
-        if let examTitle = currentExamination["name"] as? String {
-            let alertController = UIAlertController(title: "Examination complete!", message: "You \n scored \(percentage)% in the \(examTitle) examination.", preferredStyle: UIAlertControllerStyle.Alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
-            presentViewController(alertController, animated: true, completion: nil)
-        }
+        performSegueWithIdentifier("score", sender: self)
     }
-    
+
     /* ----------------------------------------- */
     // VIEW LOAD TRIGGERS
     /* ----------------------------------------- */
+
+    override func viewWillDisappear(animated: Bool) {
+        if self.isMovingFromParentViewController() {
+            resetTimer()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    // RESET TIMERS
-    //
-        countdownDuration = 480
-        resetTimer()
-        timerPicker.selectRow(7, inComponent: 0, animated: false)
-
+        
+        var timeInMinutes = appDefaults.time/60
+        self.TimerCount.text = "\(Int(timeInMinutes)):00"
+        self.timerPicker.selectRow(Int(timeInMinutes-1), inComponent: 0, animated: false)
+    
+    // SET UP START TIMER BUTTON
+    //        
+        self.finishedButton.hidden = true
+        self.startButton.hidden = false
+        
     // SET UP CURRENT EXAMINATION COLORS
     //
-        
+        self.title = self.currentExaminationName?.capitalizedString
         self.navigationController?.navigationBar.barTintColor = self.currentExaminationColor
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
         self.timerBackground.backgroundColor = self.currentExaminationColor
@@ -153,11 +151,13 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         self.timerBackground.layer.shadowRadius = 3.0;
         self.timerBackground.layer.shadowColor = UIColor.blackColor().CGColor;
         self.timerBackground.layer.shadowOffset = CGSizeMake(0.0, 0.0);
-    }
+        self.finishBottomButton.setTitleColor(currentExaminationColor, forState: UIControlState.Normal)
+        
+        
+    // RESET PROCEDURES
+    //
+        resetAllProcedures(currentExamination)
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     /* ----------------------------------------- */
@@ -175,44 +175,54 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         }
         return numberCount!
     }
-    
+        
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("customExaminationCell", forIndexPath: indexPath) as ExaminationTableViewCell
-        
-        var procedure : AnyObject?
-        if let examinationGroup = currentExamination["examinationGroups"]![indexPath.section] as? NSMutableDictionary {
-            procedure = examinationGroup["procedures"]
-        }
-        procedure = procedure![indexPath.row]
 
-        let isChecked = procedure!["isChecked"] as Bool
-        
-        if let procedureText = procedure!["name"] as? String {
-            cell.procedureLabel.text = procedureText
-        }
-        examinationCount += 1
+        var procedure = getProcedureByIndexPath(currentExamination, indexPath.section, indexPath.row)
+
+        cell.procedureLabel.text = procedure["name"] as? String
+
         let origImage = UIImage(named: "circle-icon")
         let tintedImage = origImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-        cell.circleUnchecked.alpha = 0.15
-        cell.circleUnchecked.setImage(tintedImage, forState: .Normal)
-        cell.circleUnchecked.tintColor = UIColor.blackColor()
-
-//        toggleCheckbox(currentExamination["name"!], indexPath.section, indexPath.row, isChecked)
-
         
+        if procedure["isChecked"] as Bool == true {
+            let checkOrigImage = UIImage(named: "circle-checked-icon")
+            let CheckTintedImage = checkOrigImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+            cell.checkButton.setImage(CheckTintedImage, forState: .Normal)
+            cell.checkButton.tintColor = self.currentExaminationColor
+            cell.checkButton.alpha = 1.00
+
+        } else {
+            cell.checkButton.alpha = 0.15
+            cell.checkButton.setImage(tintedImage, forState: .Normal)
+            cell.checkButton.tintColor = UIColor.blackColor()
+            
+        }
+        
+        let nextImage = UIImage(named: "next-icon")
+        let nextTintedImage = nextImage?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+        cell.detailButton.setImage(nextTintedImage, forState: .Normal)
+        cell.detailButton.tintColor = UIColor.blackColor()
+        cell.detailButton.alpha = 0.15
+
         return cell
 
-        
     }
     
-    /* ----------------------------------------- */
-    // NAVIGATION
-    /* ----------------------------------------- */
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var detailView = segue.destinationViewController as DetailViewController
-        detailView.selectedProcedure = selectedProcedure
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let group = getGroupByIndexPath(currentExamination, section)
+        var title =  group["groupTitle"] as? String
+        return title
     }
+
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header:UITableViewHeaderFooterView = view as UITableViewHeaderFooterView
+        header.textLabel.textColor = UIColor.blackColor()
+        header.textLabel.alpha = 0.50
+        header.textLabel.font = UIFont.boldSystemFontOfSize(14)
+    }
+    
     
     /* ----------------------------------------- */
     // TIMER
@@ -222,15 +232,17 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
 
     var startTime = NSDate()
     var timer = NSTimer()
-    var isRunning = false
     var totalCountDownTimeInterval : NSTimeInterval?
 
     func updateTime() {
-        totalCountDownTimeInterval = NSTimeInterval(self.countdownDuration!)
+        totalCountDownTimeInterval = NSTimeInterval(appDefaults.time)
         var elapsedTime : NSTimeInterval  = NSDate().timeIntervalSinceDate(startTime)
         var remainingTime : NSTimeInterval = totalCountDownTimeInterval! - elapsedTime
         if remainingTime <= 0.0 {
             timer.invalidate()
+            displayExaminationScore()
+            resetTimer()
+            return
         }
         let minutes = UInt8(remainingTime / 60.0)
         remainingTime = remainingTime - (NSTimeInterval(minutes) * 60)
@@ -242,12 +254,15 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
     }
 
     @IBAction func StartButton(sender: AnyObject) {
-        if !timer.valid {
-            startTime = NSDate()
-            let aSelector : Selector = "updateTime"
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.10, target: self, selector: aSelector, userInfo: nil, repeats: true)
-        }
+        self.finishedButton.hidden = false
+        self.startButton.hidden = true
+        resetTimer()
+        startTime = NSDate()
+        let aSelector : Selector = "updateTime"
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.10, target: self, selector: aSelector, userInfo: nil, repeats: true)
     }
+    
+    
     
     @IBAction func StopButton(sender: AnyObject) {
         timer.invalidate()
@@ -255,8 +270,8 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
 
     func resetTimer() {
         timer.invalidate()
-        self.countdownDuration = Double(self.chosenTimeInSeconds)
-        self.TimerCount.text = "\(self.chosenTimeInMinutes):00"
+        var timeInMinutes = appDefaults.time/60
+        self.TimerCount.text = "\(Int(timeInMinutes)):00"
     }
 
     /* ----------------------------------------- */
@@ -282,15 +297,29 @@ class ExaminationViewController: UIViewController, UITableViewDataSource, UITabl
         return attributedString
     }
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.chosenTimeInMinutes = row + 1
-        self.chosenTimeInSeconds = (row + 1) * 60
+        self.selectedTimeInSeconds = Double((row + 1) * 60)
     }
     
+    /* ----------------------------------------- */
+    // SEGUE
+    /* ----------------------------------------- */
     
-    
-    
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "detail" {
+            var detailView = segue.destinationViewController as DetailViewController
+            detailView.selectedProcedure = selectedProcedure
+        } else {
+            var examinationCompleteView = segue.destinationViewController as ExaminationCompleteViewController
+            examinationCompleteView.currentExamination = currentExamination
+            examinationCompleteView.currentExaminationColor = currentExaminationColor
+            examinationCompleteView.currentExaminationName = currentExaminationName
+            examinationCompleteView.currentExaminationProcedures = currentExaminationProcedures
+            let (procedureCount, totalScore) = getTotalNumberOfProceduresAndScore(currentExamination)
+            println("There were \(procedureCount) and the score was \(totalScore)")
+            let score = (totalScore / procedureCount) * 100
+            examinationCompleteView.currentExaminationScore = Int(score)
+        }
+    }
     
 
 

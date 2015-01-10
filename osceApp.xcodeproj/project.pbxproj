@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC4920271A2AB70800BC18C7 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4920261A2AB70800BC18C7 /* CircleProgressView.swift */; };
+		EC4920291A2AB85400BC18C7 /* ExaminationCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4920281A2AB85400BC18C7 /* ExaminationCompleteViewController.swift */; };
+		EC72ACDB1A29D49C003BD35B /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC72ACDA1A29D49C003BD35B /* AppConstants.swift */; };
+		EC7C8B8F1A2A73E500FC4722 /* ParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7C8B8E1A2A73E500FC4722 /* ParticleView.swift */; };
+		EC7C8B911A2A7AD700FC4722 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = EC7C8B901A2A7AD700FC4722 /* image.png */; };
 		EC9E1BCC1A23E387003BFB2C /* empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9E1BCB1A23E387003BFB2C /* empty.xib */; };
 		ECA731ED1A23253C00805EA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA731EC1A23253C00805EA2 /* AppDelegate.swift */; };
 		ECA731F21A23253C00805EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA731F01A23253C00805EA2 /* Main.storyboard */; };
@@ -15,7 +20,6 @@
 		ECA732031A23253D00805EA2 /* osceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732021A23253D00805EA2 /* osceAppTests.swift */; };
 		ECA7320D1A23264000805EA2 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA7320C1A23264000805EA2 /* data.plist */; };
 		ECA732111A2326A100805EA2 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732101A2326A100805EA2 /* CategoryViewController.swift */; };
-		ECA732411A233AD500805EA2 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732401A233AD500805EA2 /* ExampleTableViewController.swift */; };
 		ECA732431A233C4E00805EA2 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */; };
 		ECA732451A233EAC00805EA2 /* LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732441A233EAC00805EA2 /* LoadData.swift */; };
 		ECA732471A2342FD00805EA2 /* ThemeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA732461A2342FD00805EA2 /* ThemeColors.swift */; };
@@ -23,6 +27,7 @@
 		ECB8C4E91A295E2700E9EEB3 /* Procedures.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB8C4E81A295E2700E9EEB3 /* Procedures.swift */; };
 		ECD1251B1A23F262000E2FC2 /* ExaminationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */; };
 		ECD1251E1A23F919000E2FC2 /* ExaminationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */; };
+		ECE2B40B1A38186000697ACE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE2B40A1A38186000697ACE /* StoreKit.framework */; };
 		ECEC40811A24784E00B4B954 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC40801A24784E00B4B954 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC4920261A2AB70800BC18C7 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		EC4920281A2AB85400BC18C7 /* ExaminationCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationCompleteViewController.swift; sourceTree = "<group>"; };
+		EC72ACDA1A29D49C003BD35B /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EC7C8B8E1A2A73E500FC4722 /* ParticleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleView.swift; sourceTree = "<group>"; };
+		EC7C8B901A2A7AD700FC4722 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		EC9E1BCB1A23E387003BFB2C /* empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = empty.xib; sourceTree = "<group>"; };
 		ECA731E71A23253C00805EA2 /* osceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA731EB1A23253C00805EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,7 +59,6 @@
 		ECA732021A23253D00805EA2 /* osceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osceAppTests.swift; sourceTree = "<group>"; };
 		ECA7320C1A23264000805EA2 /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		ECA732101A2326A100805EA2 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryViewController.swift; path = ../CategoryViewController.swift; sourceTree = "<group>"; };
-		ECA732401A233AD500805EA2 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExampleTableViewController.swift; path = ../ExampleTableViewController.swift; sourceTree = "<group>"; };
 		ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		ECA732441A233EAC00805EA2 /* LoadData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadData.swift; sourceTree = "<group>"; };
 		ECA732461A2342FD00805EA2 /* ThemeColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeColors.swift; sourceTree = "<group>"; };
@@ -57,6 +66,7 @@
 		ECB8C4E81A295E2700E9EEB3 /* Procedures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedures.swift; sourceTree = "<group>"; };
 		ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationViewController.swift; sourceTree = "<group>"; };
 		ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExaminationTableViewCell.swift; sourceTree = "<group>"; };
+		ECE2B40A1A38186000697ACE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		ECEC40801A24784E00B4B954 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE2B40B1A38186000697ACE /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +92,7 @@
 		ECA731DE1A23253C00805EA2 = {
 			isa = PBXGroup;
 			children = (
+				ECE2B40A1A38186000697ACE /* StoreKit.framework */,
 				ECA731E91A23253C00805EA2 /* osceApp */,
 				ECA731FF1A23253D00805EA2 /* osceAppTests */,
 				ECA731E81A23253C00805EA2 /* Products */,
@@ -108,6 +120,7 @@
 				ECA732421A233C4E00805EA2 /* CategoryTableViewCell.swift */,
 				ECD1251A1A23F262000E2FC2 /* ExaminationViewController.swift */,
 				ECD1251D1A23F919000E2FC2 /* ExaminationTableViewCell.swift */,
+				EC4920281A2AB85400BC18C7 /* ExaminationCompleteViewController.swift */,
 				ECEC40801A24784E00B4B954 /* DetailViewController.swift */,
 				ECA731EA1A23253C00805EA2 /* Supporting Files */,
 			);
@@ -117,8 +130,8 @@
 		ECA731EA1A23253C00805EA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EC72ACDA1A29D49C003BD35B /* AppConstants.swift */,
 				ECB48A1B1A26074F00E03563 /* SpringAnimation.swift */,
-				ECA732401A233AD500805EA2 /* ExampleTableViewController.swift */,
 				ECA7320C1A23264000805EA2 /* data.plist */,
 				ECA731EB1A23253C00805EA2 /* Info.plist */,
 			);
@@ -145,9 +158,12 @@
 		ECD1251C1A23F354000E2FC2 /* LayoutObjects */ = {
 			isa = PBXGroup;
 			children = (
+				EC7C8B901A2A7AD700FC4722 /* image.png */,
 				ECA732441A233EAC00805EA2 /* LoadData.swift */,
 				EC9E1BCB1A23E387003BFB2C /* empty.xib */,
+				EC7C8B8E1A2A73E500FC4722 /* ParticleView.swift */,
 				ECA732461A2342FD00805EA2 /* ThemeColors.swift */,
+				EC4920261A2AB70800BC18C7 /* CircleProgressView.swift */,
 				ECB8C4E81A295E2700E9EEB3 /* Procedures.swift */,
 			);
 			name = LayoutObjects;
@@ -202,9 +218,16 @@
 				TargetAttributes = {
 					ECA731E61A23253C00805EA2 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 7ZMA8G9LE2;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					ECA731FB1A23253D00805EA2 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 7ZMA8G9LE2;
 						TestTargetID = ECA731E61A23253C00805EA2;
 					};
 				};
@@ -234,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA731F21A23253C00805EA2 /* Main.storyboard in Resources */,
+				EC7C8B911A2A7AD700FC4722 /* image.png in Resources */,
 				ECA731F71A23253C00805EA2 /* LaunchScreen.xib in Resources */,
 				ECA7320D1A23264000805EA2 /* data.plist in Resources */,
 				EC9E1BCC1A23E387003BFB2C /* empty.xib in Resources */,
@@ -256,16 +280,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECEC40811A24784E00B4B954 /* DetailViewController.swift in Sources */,
-				ECA732411A233AD500805EA2 /* ExampleTableViewController.swift in Sources */,
 				ECD1251E1A23F919000E2FC2 /* ExaminationTableViewCell.swift in Sources */,
 				ECA732471A2342FD00805EA2 /* ThemeColors.swift in Sources */,
 				ECD1251B1A23F262000E2FC2 /* ExaminationViewController.swift in Sources */,
+				EC4920271A2AB70800BC18C7 /* CircleProgressView.swift in Sources */,
+				EC7C8B8F1A2A73E500FC4722 /* ParticleView.swift in Sources */,
 				ECA732111A2326A100805EA2 /* CategoryViewController.swift in Sources */,
 				ECA731ED1A23253C00805EA2 /* AppDelegate.swift in Sources */,
+				EC72ACDB1A29D49C003BD35B /* AppConstants.swift in Sources */,
 				ECB8C4E91A295E2700E9EEB3 /* Procedures.swift in Sources */,
 				ECB48A1C1A26074F00E03563 /* SpringAnimation.swift in Sources */,
 				ECA732451A233EAC00805EA2 /* LoadData.swift in Sources */,
 				ECA732431A233C4E00805EA2 /* CategoryTableViewCell.swift in Sources */,
+				EC4920291A2AB85400BC18C7 /* ExaminationCompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +415,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = osceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,9 +428,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = osceApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -408,6 +441,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -419,6 +454,7 @@
 				INFOPLIST_FILE = osceAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osceApp.app/osceApp";
 			};
 			name = Debug;
@@ -427,6 +463,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -434,6 +472,7 @@
 				INFOPLIST_FILE = osceAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osceApp.app/osceApp";
 			};
 			name = Release;
