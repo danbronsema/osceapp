@@ -13,11 +13,9 @@ Additional features currently being considered:
  - Adding in sensitivities, specificities and likeyhood ratios for the individual procedures  
  - Sharing links for examination scores
 
-If you have any further suggestions or want to assist in implementing features please do so!
+This was the first major iOS swift app I developed. So refactoring is desperately needed in order to assist with implementing further features. If you have any further suggestions or want to assist please add an issue or pull request!
 
 ## Get involved
-This was the first major iOS swift app I developed. 
-
 osceApp needs your help. Perhaps you are medical student or a developer interested in open-source medical apps.
 Pull requests are welcome for the following:
  - Updated examination information and notes
