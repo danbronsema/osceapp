@@ -1,3 +1,4 @@
+[osceApp Logo](https://github.com/danbronsema/osceapp/blob/master/osceApp/Images.xcassets/AppIcon.appiconset/60%403x.png)
 # osceApp
 A free and simple app to help medical students practice for OSCE examinations. With easy checklists, countdown timers, and notes on examination procedures - it's an invaluable addition to your preperation.
 
